@@ -47,6 +47,6 @@ public class Person {
 	//메소드 일반
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", hp=" + hp + ", company=" + company + "]";
+		return "이름: " + name +"\t"+""+ "핸드폰: " + hp +"\t"+""+ "회사: " + company+"";
 	}
 }
