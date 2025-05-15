@@ -23,7 +23,6 @@ public class Ex03 {
 		OutputStream out = new FileOutputStream("C:\\JavaStudy\\PhoneDB-copy.txt"); 
 		OutputStreamWriter osw = new OutputStreamWriter(out,"UTF-8");				
 		BufferedWriter bw = new BufferedWriter(osw);
-		System.out.println("-------------------------스트림준비완료");
 		
 		while(true){
 			String str = br.readLine();
@@ -37,29 +36,33 @@ public class Ex03 {
 			bw.newLine();
 		}
 		
+		//System.out.println("이름: "+ name);
+		//System.out.println("핸드폰: "+ hp );
+		//System.out.println("회사: "+ company );
+		//System.out.println("");
+		
 		//이효리,010-2222-3333,031-2323-4441 ","로 구분한다 --> 배열
 		
 		String stri = "010-2222-3333";
 		String[] sArr = stri.split(",");     	
 		for(int i=0; i<sArr.length; i++) { 		
-			System.out.println(sArr[i]);	
+			System.out.print(sArr[i]);	
 		}
-		
 		
 		//스트림 종료
 		bw.close();
 		br.close();
-		System.out.println("------------------------프로그램 종료");
-		
-	
 		
 		//문제에 있는 형식으로 출력한다
-		
-		System.out.println("이름: "+ Person.class.getName() );
-		//System.out.println("핸드폰: "+ hp );
-		//System.out.println("회사: "+ company );
-		//System.out.println("");
+
 		
 	}
 
 }
+/*
+ 결 과 값이 다르게 보임
+이효리,010-2222-3333,031-2323-4441
+정우성,010-2323-2323,02-5555-5555
+이정재,010-9999-9999,02-8888-8888
+010-2222-3333
+*/
