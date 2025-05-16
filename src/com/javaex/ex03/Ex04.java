@@ -24,20 +24,53 @@ public class Ex04 {
 			//파일에서 1줄(이효리)을 읽는다
 			String str =br.readLine(); 
 			
-			//읽어줄에서 이름 hp company로 분리한다  
-			//"이효리,010-2222-3333,031-2323-4441" -->[이효리][010-2222-3333][031-2323-4441]
-			
-			
+			//마지막 이면 끝
 			if(str == null) {
 				break;
 			}
+			
+			//읽어줄에서 이름 hp company로 분리한다  
+			//"이효리,010-2222-3333,031-2323-4441" -->[이효리][010-2222-3333][031-2323-4441]
 			String[] sArr = str.split(",");
 			
-			System.out.println(sArr[0]);
-			System.out.println(sArr[1]);
-			System.out.println(sArr[2]);
-			System.out.println("-----------------------------");
+			String name = sArr[0];
+			String hp = sArr[1];
+			String company = sArr[2];
+			
+			//Person을 메모리에 올린다
+			Person p = new Person(name,hp,company);
+		
+			//Person주소를 List에 추가한다
+			pList.add(p);
 		}
+		
+		//테스트전체값 출력
+		System.out.println("--------테스트전체값 출력-------------------------");
+		System.out.println(pList.toString());
+		
+		//출력
+		System.out.println("---------출력-----------------------");
+		for(int i=0; i<pList.size(); i++) {
+			System.out.println(pList.get(i).toString());
+		}
+		System.out.println("--------------------------------");
+		
+		//이름만 출력
+		System.out.println("-------이름만 출력-------------------------");
+		for(int i=0; i<pList.size(); i++) {
+			System.out.println(pList.get(i).getName());
+		}
+		
+		//첫번째 사람의 이름,hp
+		System.out.println("-------첫번째 사람의 이름,hp-------------------------");
+		/*
+		System.out.println(pList.get(0).getName());
+		System.out.println(pList.get(0).getHp());
+		*/
+		Person p01 = pList.get(0);
+		System.out.println(pList.get(0).getName());
+		System.out.println(pList.get(0).getHp());	
+		
+		br.close();
 	}
-
 }
