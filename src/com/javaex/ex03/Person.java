@@ -7,6 +7,7 @@ public class Person {
 	private String hp;
 	private String company;
 
+	
 	//생성자
 	public Person() {
 	}
