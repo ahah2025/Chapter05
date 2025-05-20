@@ -17,8 +17,6 @@ public class Ex02 {
 		
 		byte[] buff = new byte[1024];
 		
-		
-		
 		System.out.println("복사시작");
 		
 		//반복
@@ -41,7 +39,5 @@ public class Ex02 {
 		out.close();
 
 		System.out.println("프로그램 종료");
-		
 	}
-
 }

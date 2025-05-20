@@ -15,7 +15,7 @@ public class Ex03 {
 	public static void main(String[] args) throws IOException {
 
 		//PhoneDB.txt 파일을 읽는다 (MS949 방식으로 저장되어 있음)
-		InputStream in = new FileInputStream("C:\\JavaStudy\\PhoneDB_UTF8.txt"); 
+		InputStream in = new FileInputStream("C:\\JavaStudy\\PhoneDB.txt"); 
 		InputStreamReader isr = new InputStreamReader(in, "MS949");		 
 		BufferedReader br = new BufferedReader(isr);					
 		
